@@ -8,7 +8,8 @@ import (
 	"example.com/spring-create/internal/app"
 )
 
-var version = "0.1.0"
+// version is replaced with the v-prefixed tag version by GoReleaser.
+var version = "dev"
 
 func main() {
 	ctx, stop := signalContext()

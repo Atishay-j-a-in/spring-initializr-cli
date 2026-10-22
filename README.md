@@ -36,10 +36,11 @@ Download the matching binary from this repository's **Releases** page. Go is not
 
 | Platform | Architecture | Release asset |
 | --- | --- | --- |
-| Windows | x86-64 | `spring-create.exe` |
-| Linux | x86-64 | `spring-create-linux-amd64` |
-| macOS on Apple Silicon | arm64 | `spring-create-darwin-arm64` |
-| macOS on Intel | amd64 | `spring-create-darwin-amd64` |
+| Windows | x86-64 | `spring-create_<version>_windows_amd64.zip` |
+| Linux | x86-64 | `spring-create_<version>_linux_amd64.tar.gz` |
+| Linux | arm64 | `spring-create_<version>_linux_arm64.tar.gz` |
+| macOS on Apple Silicon | arm64 | `spring-create_<version>_darwin_arm64.tar.gz` |
+| macOS on Intel | amd64 | `spring-create_<version>_darwin_amd64.tar.gz` |
 
 After installation, open a new terminal and confirm the command is available:
 
@@ -50,12 +51,13 @@ spring-create --help
 
 ### Windows
 
-1. Download `spring-create.exe` from Releases.
-2. Create a permanent user-level executable directory and move the binary into it:
+1. Download `spring-create_<version>_windows_amd64.zip` from Releases.
+2. Extract it, then create a permanent user-level executable directory and move the binary into it:
 
 ```powershell
+Expand-Archive "$HOME\Downloads\spring-create_<version>_windows_amd64.zip" "$HOME\Downloads\spring-create-release"
 New-Item -ItemType Directory -Force "$HOME\bin"
-Move-Item "$HOME\Downloads\spring-create.exe" "$HOME\bin\spring-create.exe"
+Move-Item "$HOME\Downloads\spring-create-release\spring-create.exe" "$HOME\bin\spring-create.exe"
 ```
 
 3. Add that directory to your user `PATH` once:
@@ -76,12 +78,12 @@ spring-create
 
 ### macOS
 
-1. Download the Apple Silicon (`darwin-arm64`) or Intel (`darwin-amd64`) binary from Releases.
+1. Download the Apple Silicon (`darwin_arm64`) or Intel (`darwin_amd64`) archive from Releases.
 2. Install it to a user-local binary directory:
 
 ```sh
 mkdir -p "$HOME/.local/bin"
-mv "$HOME/Downloads/spring-create-darwin-arm64" "$HOME/.local/bin/spring-create"
+tar -xzf "$HOME/Downloads/spring-create_<version>_darwin_arm64.tar.gz" -C "$HOME/.local/bin"
 chmod +x "$HOME/.local/bin/spring-create"
 ```
 
@@ -100,12 +102,12 @@ spring-create
 
 ### Linux
 
-1. Download `spring-create-linux-amd64` from Releases.
+1. Download the x86-64 (`linux_amd64`) or ARM64 (`linux_arm64`) archive from Releases.
 2. Install it to a user-local binary directory:
 
 ```sh
 mkdir -p "$HOME/.local/bin"
-mv "$HOME/Downloads/spring-create-linux-amd64" "$HOME/.local/bin/spring-create"
+tar -xzf "$HOME/Downloads/spring-create_<version>_linux_amd64.tar.gz" -C "$HOME/.local/bin"
 chmod +x "$HOME/.local/bin/spring-create"
 ```
 
