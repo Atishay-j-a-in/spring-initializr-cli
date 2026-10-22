@@ -1,0 +1,13 @@
+{
+  "dependencies": {"type": "hierarchical-multi-select", "values": [{"name": "Web", "values": [{"id": "web", "name": "Spring Web", "description": "Full-stack web development."}]}]},
+  "type": {"type": "action", "default": "maven-project", "values": [{"id": "maven-project", "name": "Maven", "action": "/starter.zip", "tags": {"build": "maven", "format": "project"}}]},
+  "packaging": {"type": "single-select", "default": "jar", "values": [{"id": "jar", "name": "Jar"}]},
+  "javaVersion": {"type": "single-select", "default": "17", "values": [{"id": "17", "name": "17"}]},
+  "language": {"type": "single-select", "default": "java", "values": [{"id": "java", "name": "Java"}]},
+  "bootVersion": {"type": "single-select", "default": "4.1.1", "values": [{"id": "4.1.1", "name": "4.1.1"}]},
+  "groupId": {"type": "text", "default": "com.example"},
+  "artifactId": {"type": "text", "default": "demo"},
+  "name": {"type": "text"},
+  "description": {"type": "text"},
+  "packageName": {"type": "text", "default": "com.example.demo"}
+}

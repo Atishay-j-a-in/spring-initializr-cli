@@ -1,0 +1,17 @@
+# Build output
+dist/
+bin/
+
+# Go tooling
+*.test
+*.out
+coverage.out
+
+# Windows
+*.exe
+*.dll
+
+# macOS and editor files
+.DS_Store
+.idea/
+.vscode/
